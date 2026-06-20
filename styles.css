@@ -1,9 +1,14 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     background: #00020e;
     color: white;
     text-align: center;
+    overflow-x: hidden;
 }
 
 .container {
@@ -55,9 +60,7 @@ p {
     border-radius: 14px;
 
     width: 100%;
-    box-sizing: border-box;
-
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    max-width: 100%;
 }
 
 .button:hover {
