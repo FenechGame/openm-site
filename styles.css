@@ -1,0 +1,134 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #00020e;
+    color: white;
+    text-align: center;
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    transition: transform 0.2s ease;
+}
+
+.logo:hover {
+    transform: scale(1.25);
+}
+
+h1 {
+    font-size: 22px;
+    margin: 20px 0 10px;
+}
+
+h1 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+p {
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+.button {
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 12px;
+    margin: 12px 0;
+
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 14px;
+
+    width: 100%;
+    box-sizing: border-box;
+
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.button:hover {
+    transform: translateY(-2px) scale(1.13);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(255, 255, 255, 0.25);
+    transform: skewX(0deg);
+}
+
+.button:active::before {
+    animation: slideLight 0.4s ease;
+}
+
+@keyframes slideLight {
+    from {
+        left: -100%;
+    }
+    to {
+        left: 100%;
+    }
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    flex: 1;
+    min-width: 0;
+    text-align: left;
+}
+
+.app-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+.text {
+    min-width: 0;
+}
+
+.text span {
+    display: block;
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+.downloads {
+    text-align: right;
+    flex-shrink: 0;
+    min-width: 80px;
+}
+
+.downloads .label {
+    font-size: 11px;
+    opacity: 0.7;
+}
+
+.downloads .value {
+    font-size: 14px;
+    font-weight: 600;
+}
